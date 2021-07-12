@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue TEST</title>
+<!-- Vue.js を読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<div id="app-102">
+  <div v-text="message"></div>    <!-- 置換される -->
+  <div v-html="message"></div>    <!-- 置換されない -->
+</div>
+<script>
+var app102 = new Vue({
+  el: '#app-102',
+  data: { message: '<b>Hello!</b>' }
+})
+</script>
