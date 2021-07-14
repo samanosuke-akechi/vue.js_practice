@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue TEST</title>
+<!-- Vue.js を読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<div id="app-108">
+  <button v-on:click="hello">Hello</button>
+  <button @click="hello">Hello</button>
+</div>
+<script>
+var app108 = new Vue({
+  el: '#app-108',
+  methods: {
+    hello: function() {
+      alert("Hello!");
+    }
+  }
+})
+</script>
