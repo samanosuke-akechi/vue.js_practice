@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue TEST</title>
+<!-- Vue.js を読み込む -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<div id="app-123">
+  <input type="text" name="text1" v-model:value="message">
+  <div>Message: <span v-once>{{ message }}</span></div>
+  <div>Message: <span>{{ message }}</span></div>
+  <button @click="button_click">ボタン</button>
+</div>
+<script>
+var app123 = new Vue({
+  el: '#app-123',
+  data: { message: 'Hello' },
+  methods: {
+    button_click: function() {
+      this.message = "Button Clicked";
+    }
+  }
+})
+</script>
